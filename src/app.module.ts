@@ -2,10 +2,11 @@ import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/c
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
+import { PrismaModule } from './prisma/prisma.module';
 import * as cors from 'cors';
 
 @Module({
-  imports: [ProductsModule],
+  imports: [ProductsModule, PrismaModule],
   controllers: [AppController],
   providers: [AppService],
 })
