@@ -1,4 +1,5 @@
 export const getProducts = ({ products}) => products;
+export const getProductById = ({products}, id) => products.find(product => product.id === id);
 
 const createActionName = actionName => `app/products/${actionName}`;
 
