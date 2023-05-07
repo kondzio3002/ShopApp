@@ -6,14 +6,14 @@ import NotFound from './components/pages/NotFound/NotFound';
 
 const App = () => {
   return (
-    <Container>
-      <MainLayout>
+    <MainLayout>
+      <Container>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
-      </MainLayout>
-    </Container>
+      </Container>
+    </MainLayout>
   )
 }
 

@@ -1,8 +1,15 @@
+import { Container, Navbar, Nav } from 'react-bootstrap';
+
 const NavBar = () => {
   return (
-    <div>
-      NavBar
-    </div>
+    <Navbar bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand>Shop App</Navbar.Brand>
+        <Nav>
+          <Nav.Link href='/'>Home</Nav.Link>
+        </Nav>
+      </Container>
+    </Navbar>
   );
 };
 
