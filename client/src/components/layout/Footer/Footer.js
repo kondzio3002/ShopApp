@@ -1,8 +1,10 @@
 const Footer = () => {
   return (
-    <div>
-      Footer
-    </div>
+    <footer className="py-3 mt-5">
+      <div align="center">
+        <small>Konrad Brożyna &copy; 2023</small>
+      </div>
+    </footer>
   );
 };
 
