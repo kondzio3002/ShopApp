@@ -1,7 +1,9 @@
+import Products from "../../features/Products/Products";
+
 const Home = () => {
   return (
     <div>
-      Home
+      <Products />
     </div>
   );
 };
