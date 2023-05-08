@@ -42,7 +42,7 @@ function getProducts() {
       id: 'fd105551-0f0d-4a9f-bc41-c559c8a17255',
       name: 'White sweatpants',
       price: 20,
-      images: 'white-sweatpants-1.jpg, white-sweatpants-2.jpg, white-sweatpants-3',
+      images: 'white-sweatpants-1.jpg, white-sweatpants-2.jpg, white-sweatpants-3.jpg',
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id quam eros. Maecenas mollis dui non metus aliquam, semper commodo sem lobortis. Sed quam ligula, porta eget est sit amet.',
     },
   ]

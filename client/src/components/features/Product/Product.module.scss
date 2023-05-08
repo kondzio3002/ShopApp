@@ -1,0 +1,32 @@
+@import './../../../styles/settings.scss';
+
+.image {
+  object-fit: scale-down;
+}
+.images {
+  border: 1px solid black;
+}
+
+.product_body {
+  position: relative;
+  background-color: $color-product-body;
+  border-radius: 10%;
+}
+
+.price {
+  text-align: center;
+}
+
+.price_inner {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.content {
+  font-size: 20px;
+}
+
+.button {
+  margin-top: 330px;
+  margin-right: 20px;
+}

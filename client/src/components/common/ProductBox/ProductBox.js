@@ -4,7 +4,6 @@ import styles from './ProductBox.module.scss';
 
 const ProductBox = ({ name, price, images, id }) => {
   const imagesArr = images.split(", ");
-  console.log(imagesArr);
 
   return (
     <Card className="col-4 m-2" style={{ width: "26.5rem"}}>
