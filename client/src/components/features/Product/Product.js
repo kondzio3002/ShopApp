@@ -30,6 +30,7 @@ const Product = () => {
             </div>
             <p className={styles.content}>{product.content}</p>
             <div align="end" className={styles.button}>
+              <input type='number'></input>
               <Button variant="warning">Add to cart</Button>
             </div>
           </Col>
