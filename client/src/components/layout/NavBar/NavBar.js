@@ -7,6 +7,7 @@ const NavBar = () => {
         <Navbar.Brand>Shop App</Navbar.Brand>
         <Nav>
           <Nav.Link href='/'>Home</Nav.Link>
+          <Nav.Link href='/cart'>Cart</Nav.Link>
         </Nav>
       </Container>
     </Navbar>
