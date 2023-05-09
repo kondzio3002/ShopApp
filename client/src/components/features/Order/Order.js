@@ -15,7 +15,7 @@ const Order = () => {
         <Col md={{ span: 8, offset: 2 }} className='col-10'>
           <Form>
 
-          <h1 className='my-4'>Contect details</h1>
+          <h1 className='my-4'>Contact details</h1>
 
             <Form.Group className='mb-3' controlId="formName">
               <Form.Label>Name</Form.Label>
