@@ -1,12 +1,12 @@
-export const getCart = ({ cart }) => cart.products;
+export const getOrder = ({ order }) => order.products;
 
 // const createActionName = actionName => `app/cart/${actionName}`;
 
-const cartReducer = (statePart = [], action) => {
+const orderReducer = (statePart = [], action) => {
   switch (action.type) {
     default:
       return statePart;
   };
 };
 
-export default cartReducer;
+export default orderReducer;

@@ -1,0 +1,11 @@
+@import './../../../styles/settings.scss';
+
+.order_box {
+  border: 1px solid $color-one;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  object-fit: scale-down;
+}

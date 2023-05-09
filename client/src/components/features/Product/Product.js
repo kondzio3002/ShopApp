@@ -20,7 +20,7 @@ const Product = () => {
             <img src={`/uploads/${imagesArr[0]}`} className={styles.image} alt="product" style={{width: "500px", height: "500px"}}/>
             <Row>
               {imagesArr.map(img => (
-                <Col className="col-2"><img src={`/uploads/${img}`} className={`${styles.image} ${styles.images}`} style={{width: "80px", height: "80px"}} /></Col>
+                <Col className="col-2"><img src={`/uploads/${img}`} className={`${styles.image} ${styles.images}`} style={{width: "80px", height: "80px"}} alt="product" /></Col>
               ))}
             </Row>
           </Col>

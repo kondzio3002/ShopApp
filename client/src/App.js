@@ -5,6 +5,7 @@ import Home from './components/pages/Home/Home';
 import NotFound from './components/pages/NotFound/NotFound';
 import Product from './components/features/Product/Product';
 import Cart from './components/features/Cart/Cart';
+import Order from './components/features/Order/Order';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/products/:id' element={<Product />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/order' element={<Order />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Container>
