@@ -11,12 +11,43 @@ datasource db {
 }
 
 model Product {
-  id      String @id @default(uuid())
-  name    String
-  price   Int
-  images  String
-  content String
+  id        String @id @default(uuid())
+  name      String
+  price     Int
+  images    String
+  content   String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  orders    ProductOnOrders[]
+}
+
+model Order {
+  id        String @id @default(uuid())
+
+  products  ProductOnOrders[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  name      String
+  surname   String
+  phone     String
+  email     String
+  address   String
+
+  price     Int
+}
+
+model ProductOnOrders {
+  product   Product @relation(fields: [productId], references: [id])
+  productId String
+  order     Order @relation(fields: [orderId], references: [id])
+  orderId   String
+
+  count     Int
+  note      String
+
+  @@id([productId, orderId])
 }
