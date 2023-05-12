@@ -1,16 +1,36 @@
 import { Navigate, useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getProductById } from '../../../redux/productsRedux';
 import { Col, Row, Button } from 'react-bootstrap';
 import styles from './Product.module.scss';
 import { useState } from 'react';
+import { addProduct } from '../../../redux/cartRedux';
 
 const Product = () => {
+
+  const dispatch = useDispatch();
+
   const { id } = useParams();
   const product = useSelector(state => getProductById(state, id));
+
   const imagesArr = product.images.split(", ");
-  // const firstImage = imagesArr.splice(0, 1)
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [count, setCount] = useState(1);
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    dispatch(addProduct(product, { count }));
+    setCount(1);
+  }
+
+  if(count < 1) {
+    setCount(1);
+  }
+
+  if(count > 999) {
+    setCount(999);
+  }
 
   if (!product) return <Navigate to='/' />
   else return (
@@ -45,8 +65,8 @@ const Product = () => {
             </div>
             <p className={styles.content}>{product.content}</p>
             <div align="end" className={styles.button}>
-              <input type='number'></input>
-              <Button variant="warning">Add to cart</Button>
+              <input type='number' value={count} onChange={e => setCount(e.target.value)}></input>
+              <Button variant="warning" onClick={handleSubmit}>Add to cart</Button>
             </div>
           </Col>
         </Row>
