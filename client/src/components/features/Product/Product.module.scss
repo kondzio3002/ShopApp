@@ -5,6 +5,7 @@
 }
 .images {
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .product_body {
@@ -34,4 +35,9 @@
     margin-right: 10px;
     width: 50px;
   }
+}
+
+.active {
+  border-color: $color-three;
+  cursor: default;
 }
