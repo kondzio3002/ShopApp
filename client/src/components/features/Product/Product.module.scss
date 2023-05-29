@@ -28,12 +28,20 @@
 }
 
 .button {
+  position: relative;
   margin-top: 330px;
   margin-right: 20px;
   input {
     padding-bottom: 5px;
     margin-right: 10px;
     width: 50px;
+  }
+
+  .note {
+    position: absolute;
+    right: 5px;
+    bottom: 50px;
+    width: 595px;
   }
 }
 

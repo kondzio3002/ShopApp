@@ -19,7 +19,12 @@
   font-size: 35px;
 }
 
-.input_note {
-  width: 1280px;
-  height: 60px;
+.icon:hover {
+  color: red;
+}
+
+.note {
+  border: 1px solid $color-one;
+  margin: 15px;
+  padding: 5px;
 }

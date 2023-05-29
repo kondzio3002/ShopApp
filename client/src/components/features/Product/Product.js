@@ -17,11 +17,13 @@ const Product = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [count, setCount] = useState(1);
+  const [note, setNote] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(addProduct(product, { count }));
+    dispatch(addProduct(product, { count, note }));
     setCount(1);
+    setNote('');
   }
 
   if(count < 1) {
@@ -65,6 +67,7 @@ const Product = () => {
             </div>
             <p className={styles.content}>{product.content}</p>
             <div align="end" className={styles.button}>
+              <textarea className={styles.note} value={note} onChange={e => setNote(e.target.value)}></textarea>
               <input type='number' value={count} onChange={e => setCount(e.target.value)}></input>
               <Button variant="warning" onClick={handleSubmit}>Add to cart</Button>
             </div>
