@@ -3,8 +3,6 @@ const initialState = {
   cart: {
     products: [],
   },
-  order: {
-    products: [],
-  },
+  order: [],
 };
 export default initialState;
