@@ -15,12 +15,12 @@ const Cart = () => {
   )
   return (
     <div>
-    <Row>
-      <Col className="col-4 mt-4" md={{ span: 1, offset: 1 }}><p>Product</p></Col>
-      <Col className="col-1 mt-4" md={{ span: 1, offset: 3 }}><p>Price</p></Col>
-      <Col className="col-1 mt-4"><p>Count</p></Col>
-      <Col className="col-1 mt-4"><p>Total price</p></Col>
-    </Row>
+      <Row className={styles.topic}>
+        <Col className="col-4 mt-4" md={{ span: 1, offset: 1 }}><p>Product</p></Col>
+        <Col className="col-1 mt-4" md={{ span: 1, offset: 3 }}><p>Price</p></Col>
+        <Col className="col-1 mt-4"><p>Count</p></Col>
+        <Col className="col-1 mt-4"><p>Total price</p></Col>
+      </Row>
 
       <div>
         {dataCart.map(cart => (<CartBox key={cart.id} {...cart} />))}

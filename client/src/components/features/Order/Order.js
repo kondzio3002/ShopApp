@@ -39,12 +39,12 @@ const Order = () => {
   if (dataOrder.length === 0) return <Navigate to="/" />
   return (
     <div>
-    <Row>
-      <Col className="col-4 mt-4" md={{ span: 1, offset: 1 }}><p>Product</p></Col>
-      <Col className="col-1 mt-4" md={{ span: 1, offset: 3 }}><p>Count</p></Col>
-      <Col className="col-1 mt-4"><p>Total price</p></Col>
-      <Col className="col-1 mt-4"><p>Note</p></Col>
-    </Row>
+      <Row className={styles.topic}>
+        <Col className="col-4 mt-4" md={{ span: 1, offset: 1 }}><p>Product</p></Col>
+        <Col className="col-1 mt-4" md={{ span: 1, offset: 3 }}><p>Count</p></Col>
+        <Col className="col-1 mt-4"><p>Total price</p></Col>
+        <Col className="col-1 mt-4"><p>Note</p></Col>
+      </Row>
 
       <div>
         {dataOrder.map(order => <OrderBox key={order.id} {...order} />)}
