@@ -8,6 +8,11 @@ import { Link } from "react-router-dom";
 const Cart = () => {
   const dataCart = useSelector(getCart);
 
+  if (dataCart.length === 0) return (
+    <div className="mt-5" align="center">
+      <h1>Your cart is empty</h1>
+    </div>
+  )
   return (
     <div>
     <Row>
