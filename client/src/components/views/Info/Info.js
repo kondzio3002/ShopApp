@@ -7,7 +7,7 @@ const Info = () => {
       <p>123 123 123</p>
       <p>email@email.com</p>
     </div>
-  )
-}
+  );
+};
 
 export default Info;
