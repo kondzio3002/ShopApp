@@ -5,9 +5,18 @@ import { ProductsModule } from './products/products.module';
 import { PrismaModule } from './prisma/prisma.module';
 import { OrdersModule } from './orders/orders.module';
 import * as cors from 'cors';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
-  imports: [ProductsModule, PrismaModule, OrdersModule],
+  imports: [
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '../../', 'client', 'build'),
+    }),
+    ProductsModule,
+    PrismaModule,
+    OrdersModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
