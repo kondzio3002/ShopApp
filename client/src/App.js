@@ -6,6 +6,7 @@ import NotFound from './components/pages/NotFound/NotFound';
 import Product from './components/features/Product/Product';
 import Cart from './components/features/Cart/Cart';
 import Order from './components/features/Order/Order';
+import About from './components/pages/About/About';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Container>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
           <Route path='/products/:id' element={<Product />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/order' element={<Order />} />

@@ -11,6 +11,7 @@ const NavBar = () => {
         <Navbar.Brand>Shop App</Navbar.Brand>
         <Nav>
           <Nav.Link as={NavLink} to='/'>Home</Nav.Link>
+          <Nav.Link as={NavLink} to='/about'>About</Nav.Link>
         </Nav>
         <Nav>
           <Nav.Link as={NavLink} to='/cart'><Button variant="warning"><FontAwesomeIcon className={styles.icon} icon={faBasketShopping}></FontAwesomeIcon></Button></Nav.Link>
