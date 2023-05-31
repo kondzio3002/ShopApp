@@ -2,3 +2,10 @@
   height: 350px;
   object-fit: scale-down;
 }
+
+@media (max-width: 767px) {
+  .product_box {
+    width: 400px;
+    text-align: center;
+  }
+}

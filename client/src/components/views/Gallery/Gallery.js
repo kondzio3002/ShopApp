@@ -5,13 +5,13 @@ const Gallery = () => {
   return (
     <div className="my-5">
       <Row>
-        <Col className={styles.photo}>
+        <Col className={`${styles.photo} mt-2`} align="center">
           <img src="/uploads/gallery/gallery-1.jpg" alt="photo" />
         </Col>
-        <Col className={styles.photo}>
+        <Col className={`${styles.photo} mt-2`} align="center">
           <img src="/uploads/gallery/gallery-2.jpg" alt="photo" />
         </Col>
-        <Col className={styles.photo}>
+        <Col className={`${styles.photo} mt-2`} align="center">
           <img src="/uploads/gallery/gallery-3.jpg" alt="photo" />
         </Col>
       </Row>

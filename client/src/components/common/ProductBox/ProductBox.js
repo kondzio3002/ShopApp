@@ -6,7 +6,7 @@ const ProductBox = ({ name, price, images, id }) => {
   const imagesArr = images.split(", ");
 
   return (
-    <Card className="col-4 m-2" style={{ width: "26.5rem"}}>
+    <Card className={`col-4 m-2 ${styles.product_box}`} style={{ width: "26.5rem"}}>
       <Card.Img className={styles.image} src={`/uploads/${imagesArr[0]}`} alt={name} />
       <Card.Body className={styles.card_body} align="center">
         <Card.Title>{name}</Card.Title>

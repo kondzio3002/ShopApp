@@ -44,7 +44,6 @@ const Product = () => {
             <img
               src={`/uploads/${imagesArr[currentImageIndex]}`}
               className={styles.image} alt="product"
-              style={{width: "500px", height: "500px"}}
             />
             <Row>
               {imagesArr.map((img, index) => (

@@ -26,7 +26,7 @@ const Products = () => {
   if (loading) return <Loader />
   else return (
     <div className="mt-4">
-      <Row>
+      <Row align="center">
         {allProducts.map(product => <ProductBox key={product.id} {...product} />)}
       </Row>
     </div>

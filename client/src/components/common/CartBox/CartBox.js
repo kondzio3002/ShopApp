@@ -27,10 +27,10 @@ const CartBox = ({ idCart, name, price, images, count, note }) => {
     <div className={`${styles.cart_box} mt-3`}>
       <Row>
         <Col className="col-1"><img className={styles.image} src={`/uploads/${imagesArr[0]}`} alt={name} /></Col>
-        <Col className="col-4 mt-4"><h2>{name}</h2></Col>
+        <Col className={`col-4 mt-4 ${styles.product_name}`}><h2>{name}</h2></Col>
         <Col className="col-1 mt-4"><h5>{price} $</h5></Col>
         <Col className="col-1 mt-4"><h5 className={styles.input_count}>{count}</h5></Col>
-        <Col className="col-1 mt-4"><h4>{totalPrice} $</h4></Col>
+        <Col className={`col-1 mt-4 ${styles.total_price}`}><h4>{totalPrice} $</h4></Col>
         <Col className="mt-4 mx-3" align="end"><Button variant="dark-outline" onClick={handleShow}><FontAwesomeIcon className={styles.icon} icon={faCircleXmark}></FontAwesomeIcon></Button></Col>
       </Row>
       {note && <p className={styles.note}>{note}</p>}

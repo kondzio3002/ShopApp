@@ -1,8 +1,11 @@
 @import './../../../styles/settings.scss';
 
 .image {
+  height: 500px;
+  width: 500px;
   object-fit: scale-down;
 }
+
 .images {
   border: 1px solid black;
   cursor: pointer;
@@ -48,4 +51,39 @@
 .active {
   border-color: $color-three;
   cursor: default;
+}
+
+@media (max-width: 767px) {
+  .image {
+    width: 350px;
+    height: 350px;
+  }
+
+  .images {
+    margin-right: 30px;
+  }
+
+  .product_body {
+    margin-top: 15px;
+  }
+
+  .button {
+    .note {
+      width: 300px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .image {
+    width: 350px;
+    height: 350px;
+  }
+
+  .button {
+    .note {
+      width: 50px;
+      bottom: 100px;
+    }
+  }
 }
