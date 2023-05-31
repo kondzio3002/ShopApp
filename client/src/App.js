@@ -7,6 +7,7 @@ import Product from './components/features/Product/Product';
 import Cart from './components/features/Cart/Cart';
 import Order from './components/features/Order/Order';
 import About from './components/pages/About/About';
+import SuccessOrder from './components/views/SuccessOrder/SuccessOrder';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='/products/:id' element={<Product />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/order' element={<Order />} />
+          <Route path='/successorder' element={<SuccessOrder />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Container>

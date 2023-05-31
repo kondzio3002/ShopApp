@@ -3,13 +3,14 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 import styles from './Order.module.scss';
 import OrderBox from "../../common/OrderBox/OrderBox";
 import { getCart } from "../../../redux/cartRedux";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { useState } from "react";
 import { addOrder } from "../../../redux/orderRedux";
 
 const Order = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const dataOrder = useSelector(getCart);
 
   const totalAmount = dataOrder.reduce((sum, order) => sum + order.price * order.count, 0)
@@ -34,6 +35,7 @@ const Order = () => {
     };
 
     dispatch(addOrder(orderData));
+    navigate('/successorder');
   };
 
   if (dataOrder.length === 0) return <Navigate to="/" />
